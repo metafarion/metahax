@@ -1,5 +1,5 @@
 # metahax
-My Gentoo Portage overlay for ebuilds that didn't seem to exist yet.
+I made a Gentoo Portage overlay for ebuilds that didn't seem to exist yet.
 
 To use this overlay, place the included `metahax.conf` file in `/etc/portage/repos.conf`, or create your own file with the following (substitute your own location if you like)
 ```
@@ -10,3 +10,9 @@ To use this overlay, place the included `metahax.conf` file in `/etc/portage/rep
  auto-sync = yes`
 ```
 Ebuilds will be then available after the next `emerge --sync`.
+
+Packages in this overlay:
+
+*  games-util/minigalaxy
+	Simple GOG client for Linux
+	http://github.com/sharkwouter/minigalaxy
