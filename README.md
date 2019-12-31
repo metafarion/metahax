@@ -1,5 +1,5 @@
 # metahax
-I made a Gentoo Portage overlay for ebuilds that didn't seem to exist yet.
+I made a Gentoo Portage overlay and some ebuilds that didn't seem to exist yet.
 
 **[games-util/minigalaxy](games-util/minigalaxy)** - Simple GOG client for Linux  
 http://github.com/sharkwouter/minigalaxy
