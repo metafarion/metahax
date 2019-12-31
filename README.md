@@ -13,6 +13,5 @@ Ebuilds will be then available after the next `emerge --sync`.
 
 Packages in this overlay:
 
-*  games-util/minigalaxy
-	Simple GOG client for Linux
-	http://github.com/sharkwouter/minigalaxy
+**games-util/minigalaxy** - Simple GOG client for Linux  
+http://github.com/sharkwouter/minigalaxy  
