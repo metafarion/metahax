@@ -4,7 +4,6 @@
 EAPI=7
 
 PYTHON_COMPAT=( python3_6 )
-#DISTUTILS_SINGLE_IMPL=1
 
 inherit distutils-r1
 
@@ -22,8 +21,6 @@ LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS="~amd64"
 
-REQUIRED_USE=""
-
 DEPEND=">=dev-python/pygobject-3.30[${PYTHON_USEDEP}]
 	dev-python/requests[${PYTHON_USEDEP}]
 	dev-python/setuptools[${PYTHON_USEDEP}]
@@ -31,4 +28,3 @@ DEPEND=">=dev-python/pygobject-3.30[${PYTHON_USEDEP}]
 	>=net-libs/webkit-gtk-2.6
 "
 RDEPEND="${DEPEND}"
-BDEPEND=""
