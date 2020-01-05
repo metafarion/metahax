@@ -1,5 +1,5 @@
 # Metahax
-I made a Gentoo Portage overlay and some ebuilds that didn't seem to exist yet.  
+I made a Gentoo Portage overlay and some ebuilds that didn't seem to exist yet.  It's total haxxx.
 
 
 ## Installation ##
