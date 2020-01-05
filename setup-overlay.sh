@@ -39,6 +39,7 @@ if [[ $? -ne 0 ]] ; then
     echo "\nNo comprende.\n\n"
     ;;
     esac
+
   done
 fi
 
@@ -67,6 +68,7 @@ elif [ -d "${OVERLAY_DIR}" ] && [ -z "${OVERLAY_DIR}" ]; then
     echo "\nNo comprende.\n\n"
     ;;
     esac
+
   done
 else
   printf "Creating ${OVERLAY_DIR}.\n\n"
