@@ -57,7 +57,7 @@ elif [ -d "${OVERLAY_DIR}" ] && [ ! -z "${OVERLAY_DIR}" ]; then
 
     case $yn in
         [Yy][Ee][Ss]|[Yy])
-    printf "\nOk, removing contents of ${OVERLAY_DIR}!\n\n"
+    printf "\nOk, removing contents of ${OVERLAY_DIR}.\n\n"
     cd ${OVERLAY_DIR} && find -delete || exit 1 && break
     ;;
         [Nn][Oo]|[Nn])
