@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=5
+EAPI=7
 
 inherit rpm xdg-utils
 
@@ -15,6 +15,10 @@ KEYWORDS="~amd64"
 DEPEND=""
 RDEPEND="${DEPEND}"
 
+RESTRICT="bindist"
+QA_PREBUILT="usr/lib/insync/*.so*"
+QA_PRESTRIPPED="usr/lib/insync/insync"
+
 src_unpack () {
 	rpm_src_unpack ${A}
 	mkdir -p "${S}" # This required directory doesn't get created on its own for some reason
@@ -23,15 +27,13 @@ src_unpack () {
 src_install() {
 	cp -rpP "${WORKDIR}"/usr "${D}"/ || die "Install failed"
 
-#	echo "SEARCH_DIRS_MASK=\"/usr/lib*/insync\"" > "${T}/70${PN}" || die
-#	insinto "/etc/revdep-rebuild" && doins "${T}/70${PN}" || die
+	# I wasn't able to exclude this pre-compressed manpage with docompress -x, so I've resorted to decompressing it before installation.
+	gzip -d "${D}/usr/share/man/man1/insync.1.gz"
 }
 
 pkg_postinst() {
-	elog ""
 	elog "Headless operation is no longer supported by upstream"
 	elog "Insync will only run as a logged-in X user"
-	elog ""
 
 	xdg_desktop_database_update
 	xdg_icon_cache_update
