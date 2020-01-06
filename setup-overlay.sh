@@ -50,7 +50,7 @@ wget "https://raw.githubusercontent.com/metafarion/metahax/master/${REPO_NAME}.c
 # Create the overlay directory or empty it if necessary.
 if [ -d "${OVERLAY_DIR}"/.git ]; then
   printf "Existing Metahax repo found.\n\n"
-elif [ -d "${OVERLAY_DIR}" ] && [ -z "${OVERLAY_DIR}" ]; then
+elif [ -d "${OVERLAY_DIR}" ] && [ ! -z "${OVERLAY_DIR}" ]; then
   printf "${OVERLAY_DIR} already exists and is not a git repo!\n"
   while true; do
     read -r -p "Ok to empty it? [Y/N] " yn
