@@ -10,4 +10,7 @@ Alternatively, you can place the [metahax.conf](https://raw.githubusercontent.co
 ## Ebuilds in this overlay ##
 
 **[games-util/minigalaxy](games-util/minigalaxy)** - Simple GOG client for Linux  
-http://github.com/sharkwouter/minigalaxy
+http://github.com/sharkwouter/minigalaxy  
+
+**[net-misc/insync-bin](net-misc/insync-bin)** - Full-featured sync client for Google Drive and OneDrive"  
+http://www.insynchq.com  
