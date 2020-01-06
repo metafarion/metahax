@@ -39,6 +39,7 @@ if [[ $? -ne 0 ]] ; then
     echo "\nNo comprende.\n\n"
     ;;
     esac
+
   done
 fi
 
@@ -49,14 +50,14 @@ wget "https://raw.githubusercontent.com/metafarion/metahax/master/${REPO_NAME}.c
 # Create the overlay directory or empty it if necessary.
 if [ -d "${OVERLAY_DIR}"/.git ]; then
   printf "Existing Metahax repo found.\n\n"
-elif [ -d "${OVERLAY_DIR}" ] && [ -z "${OVERLAY_DIR}" ]; then
+elif [ -d "${OVERLAY_DIR}" ] && [ ! -z "${OVERLAY_DIR}" ]; then
   printf "${OVERLAY_DIR} already exists and is not a git repo!\n"
   while true; do
     read -r -p "Ok to empty it? [Y/N] " yn
 
     case $yn in
         [Yy][Ee][Ss]|[Yy])
-    printf "\nOk, removing contents of ${OVERLAY_DIR}!\n\n"
+    printf "\nOk, removing contents of ${OVERLAY_DIR}.\n\n"
     cd ${OVERLAY_DIR} && find -delete || exit 1 && break
     ;;
         [Nn][Oo]|[Nn])
@@ -67,6 +68,7 @@ elif [ -d "${OVERLAY_DIR}" ] && [ -z "${OVERLAY_DIR}" ]; then
     echo "\nNo comprende.\n\n"
     ;;
     esac
+
   done
 else
   printf "Creating ${OVERLAY_DIR}.\n\n"
