@@ -23,9 +23,7 @@ fi
 qlist -Ieq "dev-vcs/git" > /dev/null
 
 if [[ $? -ne 0 ]] ; then
-
   while true; do
-
     read -r -p "Y'all ain't got git.  Install it? [Y/N] " yn
 
     case $yn in
@@ -44,12 +42,34 @@ if [[ $? -ne 0 ]] ; then
   done
 fi
 
-# Get the goods, make the overlay directory if necessary
+# Get the goods
 printf "Fetching ${REPO_NAME}.conf\n\n"
-wget "https://raw.githubusercontent.com/metafarion/metahax/master/${REPO_NAME}.conf" -O "/etc/portage/repos.conf/${REPO_NAME}.conf"
+wget "https://raw.githubusercontent.com/metafarion/metahax/master/${REPO_NAME}.conf" -O "/etc/portage/repos.conf/${REPO_NAME}.conf" && \
 
-if [ ! -d "${OVERLAY_DIR}" ]; then
-  printf "Creating ${OVERLAY_DIR}\n\n"
+# Create the overlay directory or empty it if necessary.
+if [ -d "${OVERLAY_DIR}"/.git ]; then
+  printf "Existing Metahax repo found.\n\n"
+elif [ -d "${OVERLAY_DIR}" ] && [ -z "${OVERLAY_DIR}" ]; then
+  printf "${OVERLAY_DIR} already exists and is not a git repo!\n"
+  while true; do
+    read -r -p "Ok to empty it? [Y/N] " yn
+
+    case $yn in
+        [Yy][Ee][Ss]|[Yy])
+    printf "\nOk, removing contents of ${OVERLAY_DIR}!\n\n"
+    cd ${OVERLAY_DIR} && find -delete || exit 1 && break
+    ;;
+        [Nn][Oo]|[Nn])
+    printf "\nOk, exiting.\n\n"
+    exit 1
+    ;;
+        *)
+    echo "\nNo comprende.\n\n"
+    ;;
+    esac
+  done
+else
+  printf "Creating ${OVERLAY_DIR}.\n\n"
   mkdir -p "${OVERLAY_DIR}"
 fi
 
@@ -57,4 +77,4 @@ fi
 printf "Syncing overlay.\n\n"
 emaint sync -r "${REPO_NAME}"
 
-printf "Hecks yeah!  We ready to roll!"
+printf "Hecks yeah!  We ready to roll!\n"
