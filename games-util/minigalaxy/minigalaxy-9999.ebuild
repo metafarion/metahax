@@ -12,7 +12,7 @@ HOMEPAGE="http://github.com/sharkwouter/minigalaxy"
 
 if [[ ${PV} == *9999* ]] ; then
 	inherit git-r3
-    EGIT_REPO_URI="https://github.com/github.com/sharkwouter/minigalaxy.git"
+    EGIT_REPO_URI="https://github.com/sharkwouter/minigalaxy.git"
 else
     SRC_URI="https://github.com/sharkwouter/${PN}/archive/${PV}.tar.gz"
 	KEYWORDS="~x86 ~amd64"
