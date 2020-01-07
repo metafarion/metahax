@@ -65,7 +65,7 @@ elif [ -d "${OVERLAY_DIR}" ] && [ ! -z "${OVERLAY_DIR}" ]; then
     exit 1
     ;;
         *)
-    echo "\nNo comprende.\n\n"
+    echo "\nCome again?\n\n"
     ;;
     esac
 
