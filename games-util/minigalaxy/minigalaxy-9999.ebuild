@@ -21,10 +21,14 @@ fi
 LICENSE="GPL-3+"
 SLOT="0"
 
+IUSE="system-dosbox system-scummvm"
 DEPEND=">=dev-python/pygobject-3.30[${PYTHON_USEDEP}]
 	dev-python/requests[${PYTHON_USEDEP}]
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	>=x11-libs/gtk+-3
 	>=net-libs/webkit-gtk-2.6
 "
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	system-dosbox? ( games-emulation/dosbox )
+	system-scummvm? ( games-emulation/scummvm )
+"
