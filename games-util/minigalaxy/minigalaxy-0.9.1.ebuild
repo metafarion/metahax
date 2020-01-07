@@ -19,7 +19,7 @@ fi
 
 LICENSE="GPL-3+"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~x86 ~amd64"
 
 DEPEND=">=dev-python/pygobject-3.30[${PYTHON_USEDEP}]
 	dev-python/requests[${PYTHON_USEDEP}]
