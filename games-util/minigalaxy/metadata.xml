@@ -7,6 +7,10 @@
 	<upstream>
 		<remote-id type="github">sharkwouter/minigalaxy</remote-id>
 	</upstream>
+	<use>
+		<flag name="system-dosbox">Use system DOSBox instead of a game's packaged version.</flag>
+		<flag name="system-scummvm">Use system ScummVM instead of a game's packaged version.</flag>
+	</use>
 	<longdescription>Minigalaxy aims to be the GOG client for Linux we've not yet gotten from GOG themselves.</longdescription>
 </pkgmetadata>
 
