@@ -30,5 +30,5 @@ DEPEND=">=dev-python/pygobject-3.30[${PYTHON_USEDEP}]
 "
 RDEPEND="${DEPEND}
 	system-dosbox? ( games-emulation/dosbox )
-	system-scummvm? ( games-emulation/scummvm )
+	system-scummvm? ( games-engines/scummvm )
 "
