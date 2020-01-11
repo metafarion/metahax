@@ -1,10 +1,11 @@
 #!/bin/bash
 
-# A script to set up Portage to use the Metahax overlay
+# A script for setting up Portage to use a given github overlay
 # for us lazy people.
 
 REPO_NAME="metahax"
-REPO_URL="https://github.com/metafarion/metahax"
+AUTHOR="metafarion"
+REPO_URL="https://github.com/${AUTHOR}/${REPO_NAME}"
 OVERLAY_DIR="/var/db/repos/${REPO_NAME}"
 
 # Make sure we are root
@@ -32,7 +33,7 @@ if [[ $? -ne 0 ]] ; then
     emerge "dev-vcs/git" || exit 1 && break
     ;;
         [Nn][Oo]|[Nn])
-    printf "\nMetahax is a git overlay; it needs git to function.\n\n"
+    printf "\nThis is a git overlay; it needs git to function.\n\n"
     exit 1
     ;;
         *)
@@ -45,11 +46,11 @@ fi
 
 # Get the goods
 printf "Fetching ${REPO_NAME}.conf\n\n"
-wget "https://raw.githubusercontent.com/metafarion/metahax/master/${REPO_NAME}.conf" -O "/etc/portage/repos.conf/${REPO_NAME}.conf" && \
+wget "https://raw.githubusercontent.com/${AUTHOR}/${REPO_NAME}/master/${REPO_NAME}.conf" -O "/etc/portage/repos.conf/${REPO_NAME}.conf" && \
 
 # Create the overlay directory or empty it if necessary.
 if [ -d "${OVERLAY_DIR}"/.git ]; then
-  printf "Existing Metahax repo found.\n\n"
+  printf "Existing repo directory found: ${OVERLAY_DIR}.\n\n"
 elif [ -d "${OVERLAY_DIR}" ] && [ ! -z "${OVERLAY_DIR}" ]; then
   printf "${OVERLAY_DIR} already exists and is not a git repo!\n"
   while true; do
