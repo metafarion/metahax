@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<maintainer type="person">
-<email></email>
-</maintainer>
-<longdescription lang="en">
-</longdescription>
+	<maintainer type="person">
+		<email>metafarion@ctrl-shift.net</email>
+	</maintainer>
+	<upstream>
+		<maintainer>
+			<name>Insync Team</name>
+			<email>support@insynchq.com</email>
+		</maintainer>
+	</upstream>
+	<longdescription>
+		InSync is proprietary software, requiring a purchased license.
+		This is a very unofficial binary redistribution of their Fedora
+		package, and it is unlikely they will be willing to support it.
+	</longdescription>
 </pkgmetadata>
