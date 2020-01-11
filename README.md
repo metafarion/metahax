@@ -13,5 +13,8 @@ Alternatively, you can place the [metahax.conf](https://raw.githubusercontent.co
 **[games-util/minigalaxy](games-util/minigalaxy)** - Simple GOG client for Linux  
 http://github.com/sharkwouter/minigalaxy  
 
-**[net-misc/insync-bin](net-misc/insync-bin)** - Full-featured sync client for Google Drive and OneDrive"  
+**[net-misc/insync-bin](net-misc/insync-bin)** - Full-featured sync client for Google Drive and OneDrive  
 http://www.insynchq.com  
+
+**[app-text/pdfchain](app-text/pdfchain)** - Graphical user interface for the PDF Toolkit (PDFtk)  
+http://pdfchain.sourceforge.net
