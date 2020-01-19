@@ -1,0 +1,20 @@
+--- do_fillstatbuf.c	2018-02-08 11:53:26.000000000 -0600
++++ do_fillstatbuf.c	2020-01-18 19:39:23.317119095 -0600
+@@ -19,6 +19,7 @@
+  */
+ 
+ #include "fuse-ext2.h"
++#include "sys/sysmacros.h"
+ 
+ static inline dev_t old_decode_dev (__u16 val)
+ {
+--- op_create.c	2020-01-18 19:43:06.335125067 -0600
++++ op_create.c	2020-01-18 19:42:48.615124593 -0600
+@@ -19,6 +19,7 @@
+  */
+ 
+ #include "fuse-ext2.h"
++#include "sys/sysmacros.h"
+ 
+ int do_modetoext2lag (mode_t mode)
+ {
