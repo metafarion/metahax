@@ -20,3 +20,7 @@ http://www.insynchq.com
 
 **[app-text/pdfchain](app-text/pdfchain)** - Graphical user interface for the PDF Toolkit (PDFtk)  
 http://pdfchain.sourceforge.net
+
+**[sys-fs/fuse-ext2](sys-fs/fuse-ext2)** - FUSE module to mount ext2, ext3, and ext4 file system devices or images  
+http://github.com/alperakcan/fuse-ext2
+
