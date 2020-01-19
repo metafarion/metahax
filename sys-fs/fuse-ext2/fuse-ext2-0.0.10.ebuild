@@ -20,5 +20,10 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 PATCHES=(
-	"${FILESDIR}/glibc-2.24+-include-sysmacros.patch"
+	"${FILESDIR}/fuse-ext2-0.0.10-glibc-2.24+-sysmacros.patch"
 )
+
+src_configure() {
+	./autogen.sh || die
+	econf
+}
