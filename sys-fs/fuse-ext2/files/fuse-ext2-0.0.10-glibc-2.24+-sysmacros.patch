@@ -1,0 +1,27 @@
+Patch by: Miles V. (metafarion@ctrl-shift.net)
+Building from source requires that we include sysmacros.h explicitly for glibc-2.24 and newer.
+Communicated to upstream here: https://github.com/alperakcan/fuse-ext2/issues/107
+
+
+--- a/fuse-ext2/do_fillstatbuf.c	2018-02-08 11:53:26.000000000 -0600
++++ b/fuse-ext2/do_fillstatbuf.c	2020-01-18 19:39:23.317119095 -0600
+@@ -19,6 +19,7 @@
+  */
+ 
+ #include "fuse-ext2.h"
++#include "sys/sysmacros.h"
+ 
+ static inline dev_t old_decode_dev (__u16 val)
+ {
+
+
+--- a/fuse-ext2/op_create.c	2020-01-18 19:43:06.335125067 -0600
++++ b/fuse-ext2/op_create.c	2020-01-18 19:42:48.615124593 -0600
+@@ -19,6 +19,7 @@
+  */
+ 
+ #include "fuse-ext2.h"
++#include "sys/sysmacros.h"
+ 
+ int do_modetoext2lag (mode_t mode)
+ {
