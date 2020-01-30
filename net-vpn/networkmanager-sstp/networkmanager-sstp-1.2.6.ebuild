@@ -9,8 +9,8 @@ MY_PN="NetworkManager-sstp"
 MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Client for the proprietary Microsoft Secure Socket Tunneling Protocol(SSTP)"
-HOMEPAGE="http://github.com/enaess/network-manager-sstp"
-SRC_URI="https://github.com/enaess/network-manager-sstp/archive/release-${PV}.tar.gz"
+HOMEPAGE="https://sourceforge.net/projects/sstp-client"
+SRC_URI="https://downloads.sourceforge.net/project/sstp-client/network-manager-sstp/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="gtk"
 
 RDEPEND=">=dev-libs/dbus-glib-0.74
-	net-misc/sstp-client
+	>=net-misc/sstp-client-1.0.12
 	>=net-misc/networkmanager-${PV}
 	net-dialup/ppp:=
 	gtk? (
