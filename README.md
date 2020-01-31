@@ -24,3 +24,5 @@ http://pdfchain.sourceforge.net
 **[sys-fs/fuse-ext2](sys-fs/fuse-ext2)** - FUSE module to mount ext2, ext3, and ext4 file system devices or images  
 http://github.com/alperakcan/fuse-ext2
 
+**[net-vpn/networkmanager-sstp](net-vpn/networkmanager-sstp)** - NetworkManager plugin for sstp-client: A client for the proprietary Microsoft Secure Socket Tunneling Protocol(SSTP)  
+https://sourceforge.net/projects/sstp-client
