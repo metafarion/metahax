@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>metafarion@ctrl-shift.net</email>
+	</maintainer>
+	<upstream>
+		<remote-id type="sourceforge">sstp-client</remote-id>
+	</upstream>
+	<longdescription>Blatantly stolen and adapted from the (currently) unmaintained Gentoo ebuild of the same name.  I'd adopt it if I wasn't still so inexperienced with portage dev. Maybe someday.</longdescription>
+</pkgmetadata>
