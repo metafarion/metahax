@@ -25,6 +25,7 @@ RDEPEND=">=dev-libs/dbus-glib-0.74
 		x11-libs/gtk+:3
 		gnome-base/gnome-keyring
 		gnome-base/libgnome-keyring
+		gnome-extra/nm-applet
 	)
 "
 
