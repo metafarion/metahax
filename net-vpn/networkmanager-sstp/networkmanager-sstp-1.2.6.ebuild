@@ -5,12 +5,12 @@ EAPI=6
 
 inherit eutils
 
-MY_PN="NetworkManager-sstp"
-MY_P="${MY_PN}-${PV}"
+SRC_PN="NetworkManager-sstp"
+SRC_P="${SRC_PN}-${PV}"
 
 DESCRIPTION="Client for the proprietary Microsoft Secure Socket Tunneling Protocol(SSTP)"
 HOMEPAGE="https://sourceforge.net/projects/sstp-client"
-SRC_URI="https://downloads.sourceforge.net/project/sstp-client/network-manager-sstp/${MY_P}.tar.bz2"
+SRC_URI="https://downloads.sourceforge.net/project/sstp-client/network-manager-sstp/${SRC_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -34,7 +34,7 @@ DEPEND="${RDEPEND}
 	dev-util/intltool
 "
 
-S="${WORKDIR}/${MY_P}"
+S="${WORKDIR}/${SRC_P}"
 
 src_configure() {
 	local PPPD_VERSION="$(echo $(best_version net-dialup/ppp) | sed -e 's:net-dialup/ppp-\(.*\):\1:' -e 's:-r.*$::')"
