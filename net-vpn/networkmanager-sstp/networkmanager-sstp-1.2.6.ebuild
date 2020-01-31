@@ -15,18 +15,15 @@ SRC_URI="https://downloads.sourceforge.net/project/sstp-client/network-manager-s
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="gtk"
 
 RDEPEND=">=dev-libs/dbus-glib-0.74
 	>=net-misc/sstp-client-1.0.12
 	>=net-misc/networkmanager-${PV}
 	net-dialup/ppp:=
-	gtk? (
-		x11-libs/gtk+:3
-		gnome-base/gnome-keyring
-		gnome-base/libgnome-keyring
-		gnome-extra/nm-applet
-	)
+	x11-libs/gtk+:3
+	gnome-base/gnome-keyring
+	gnome-base/libgnome-keyring
+	gnome-extra/nm-applet
 "
 
 DEPEND="${RDEPEND}
@@ -43,8 +40,7 @@ src_configure() {
 		--disable-more-warnings \
 		--disable-static \
 		--with-dist-version=Gentoo \
-		--with-pppd-plugin-dir="${EPREFIX}/usr/$(get_libdir)/pppd/${PPPD_VERSION}" \
-		 $(use_with gtk gnome)
+		--with-pppd-plugin-dir="${EPREFIX}/usr/$(get_libdir)/pppd/${PPPD_VERSION}"
 }
 
 src_install() {
