@@ -32,3 +32,7 @@ RDEPEND="${DEPEND}
 	system-dosbox? ( games-emulation/dosbox )
 	system-scummvm? ( games-engines/scummvm )
 "
+
+python_prepare() {
+	sed -i -e "s/find_packages()/find_packages(exclude=['tests'])/" setup.py || die
+}
