@@ -5,7 +5,7 @@ EAPI=7
 
 inherit autotools
 
-DESCRIPTION="A fork of dwipe from Darik's Boot and Nuke (DBAN) for secure disk erasue."
+DESCRIPTION="A fork of dwipe from Darik's Boot and Nuke (DBAN) for secure disk erasure."
 
 HOMEPAGE="https://github.com/martijnvanbrummelen/nwipe/"
 SRC_URI="https://github.com/martijnvanbrummelen/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
