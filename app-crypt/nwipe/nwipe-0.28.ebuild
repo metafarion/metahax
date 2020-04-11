@@ -5,19 +5,20 @@ EAPI=7
 
 inherit autotools
 
-DESCRIPTION="Securely erase disks using a variety of recognized methods"
+DESCRIPTION="A fork of dwipe from Darik's Boot and Nuke (DBAN) for secure disk erasue."
+
 HOMEPAGE="https://github.com/martijnvanbrummelen/nwipe/"
 SRC_URI="https://github.com/martijnvanbrummelen/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+dmidecode +smartmontools"
+IUSE="+dmi +smart"
 
 RDEPEND=">=sys-block/parted-2.3
 	>=sys-libs/ncurses-5.7-r7:=
-	dmidecode? ( sys-apps/dmidecode )
-	smartmontools? ( sys-apps/smartmontools )"
+	dmi? ( sys-apps/dmidecode )
+	smart? ( sys-apps/smartmontools )"
 DEPEND="${RDEPEND}"
 BDEPEND="virtual/pkgconfig"
 
