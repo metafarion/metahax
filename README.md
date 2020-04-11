@@ -26,3 +26,6 @@ http://github.com/alperakcan/fuse-ext2
 
 **[net-vpn/networkmanager-sstp](net-vpn/networkmanager-sstp)** - NetworkManager plugin for sstp-client: A client for the proprietary Microsoft Secure Socket Tunneling Protocol(SSTP)  
 https://sourceforge.net/projects/sstp-client
+
+**[app-crypt/nwipe](app-crypt/nwipe)** - A fork of dwipe from Darik's Boot and Nuke (DBAN) for secure disk erasure.
+https://github.com/martijnvanbrummelen/nwipe
