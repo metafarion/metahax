@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>metafarion@ctrl-shift.net</email>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">martijnvanbrummelen/nwipe</remote-id>
+	</upstream>
+	<use>
+	  	<flag name="dmi">Use <pkg>sys-apps/dmidecode</pkg> to read SMBIOS/DMI host data</flag>
+		<flag name="smart">Use <pkg>sys-apps/smartmontools</pkg> to read serial numbers from USB-connected IDE/SATA drives.</flag>
+	</use>
+</pkgmetadata>
