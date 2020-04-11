@@ -16,8 +16,8 @@ IUSE="+dmidecode +smartmontools"
 
 RDEPEND=">=sys-block/parted-2.3
 	>=sys-libs/ncurses-5.7-r7:=
-	?dmidecode? ( sys-apps/dmidecode )
-	?smartmontools ( sys-apps/smartmontools )"
+	dmidecode? ( sys-apps/dmidecode )
+	smartmontools? ( sys-apps/smartmontools )"
 DEPEND="${RDEPEND}"
 BDEPEND="virtual/pkgconfig"
 
