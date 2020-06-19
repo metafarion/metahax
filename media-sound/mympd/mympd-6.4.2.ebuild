@@ -18,6 +18,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+id3tag +ssl"
 
+export FEATURES="-distcc"
+
 RDEPEND="
 	id3tag? (
 		media-libs/libid3tag
@@ -31,6 +33,13 @@ BDEPEND="
 	>=dev-util/cmake-2.6
 	dev-lang/perl
 	>=virtual/jdk-1.7"
+
+pkg_setup() {
+	# Having distcc enabled causes cmake to hang for a VERY long time at the
+	# "Check for working C compiler" step.  And it doesn't seem to work
+	# correctly afterwards anyway.
+	export DISTCC_DISABLE=1
+}
 
 #src_prepare() {
 #	cmake_src_prepare
