@@ -31,3 +31,19 @@ BDEPEND="
 	>=dev-util/cmake-2.6
 	dev-lang/perl
 	>=virtual/jdk-1.7"
+
+#src_prepare() {
+#	cmake_src_prepare
+#}
+
+#src_configure() {
+#	cmake_src_configure
+#}
+
+#src_compile() {
+#	cmake_src_compile
+#}
+
+#src_install() {
+#	cmake_src_install
+#}
