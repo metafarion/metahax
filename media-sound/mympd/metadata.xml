@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>metafarion@ctrl-shift.net</email>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">jcorporation/myMPD</remote-id>
+	</upstream>
+	<use>
+	  	<flag name="id3">Use <pkg>media-libs/libid3tag</pkg> and <pkg>media-libs/flac</pkg>to extract embedded album art.</flag>
+		<flag name="ssl">Use <pkg>dev-libs/openssl</pkg> for HTTPS transport.</flag>
+	</use>
+</pkgmetadata>
