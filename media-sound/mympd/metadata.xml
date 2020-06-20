@@ -8,7 +8,8 @@
 		<remote-id type="github">jcorporation/myMPD</remote-id>
 	</upstream>
 	<use>
-	  	<flag name="id3">Use <pkg>media-libs/libid3tag</pkg> and <pkg>media-libs/flac</pkg>to extract embedded album art.</flag>
+	  	<flag name="id3">Use <pkg>media-libs/libid3tag</pkg> to extract embedded album art.</flag>
+		<flag name="flac"> Use <pkg>media-libs/flac</pkg>to extract embedded album art from FLAC files.</flag>
 		<flag name="ssl">Use <pkg>dev-libs/openssl</pkg> for HTTPS transport.</flag>
 	</use>
 </pkgmetadata>
