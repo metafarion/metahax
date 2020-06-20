@@ -9,7 +9,7 @@
 	</upstream>
 	<use>
 	  	<flag name="id3">Use <pkg>media-libs/libid3tag</pkg> to extract embedded album art.</flag>
-		<flag name="flac"> Use <pkg>media-libs/flac</pkg>to extract embedded album art from FLAC files.</flag>
-		<flag name="ssl">Use <pkg>dev-libs/openssl</pkg> for HTTPS transport.</flag>
+		<flag name="flac"> Use <pkg>media-libs/flac</pkg> to extract embedded album art from FLAC files.</flag>
+		<flag name="ssl">Enable HTTPS transport with <pkg>dev-libs/openssl</pkg></flag>
 	</use>
 </pkgmetadata>
