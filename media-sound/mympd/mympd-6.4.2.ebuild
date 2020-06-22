@@ -68,7 +68,7 @@ pkg_postinst() {
 	fi
 
 	elog
-	elog "Adapt the configuration file /etc/mympd.conf to your needs or use the"
-	elog "\`mympd-config\` tool to generate automatically a valid mympd.conf"
+	elog "Modify /etc/mympd.conf to suit your needs or use the"
+	elog "\`mympd-config\` tool to generate a valid mympd.conf automatically."
 	elog
 }
