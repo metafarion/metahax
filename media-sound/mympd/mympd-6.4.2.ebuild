@@ -30,11 +30,6 @@ RDEPEND="
 		id3? ( media-libs/libid3tag )
 		flac? ( media-libs/flac )"
 
-pkg_setup() {
-	enewgroup mympd
-	enewuser mympd -1 -1 -1 audio
-}
-
 src_compile() {
 	default
 	ENABLE_SSL=$(usex ssl "ON" "OFF")

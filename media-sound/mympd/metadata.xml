@@ -12,5 +12,6 @@
 		<flag name="flac">Use <pkg>media-libs/flac</pkg> to extract embedded album art from FLAC files.</flag>
 		<flag name="java">Minify .js and .css files with Java.</flag>
 		<flag name="ssl">Enable HTTPS transport with <pkg>dev-libs/openssl</pkg></flag>
+		<flag name="systemd">Install systemd init script.</flag>
 	</use>
 </pkgmetadata>
