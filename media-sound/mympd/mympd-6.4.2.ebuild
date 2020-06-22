@@ -17,11 +17,11 @@ SRC_URI="https://github.com/jcorporation/${MY_PN}/archive/v${PV}.tar.gz -> ${PN}
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~arm ~arm64"
-IUSE="+flac +id3 ssl systemd"
+IUSE="+flac +id3 java ssl systemd"
 
 BDEPEND="
 	>=dev-util/cmake-2.6
-	|| ( >=virtual/jre-1.7 >=virtual/jdk-1.7 )
+	java? ( || ( >=virtual/jre-1.7 >=virtual/jdk-1.7 ) )
 	dev-lang/perl"
 
 RDEPEND="
