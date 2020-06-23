@@ -21,7 +21,7 @@ IUSE="+flac +id3 java ssl systemd"
 
 BDEPEND="
 	>=dev-util/cmake-2.6
-	java? ( || ( >=virtual/jre-1.7 >=virtual/jdk-1.7 ) )
+	java? ( >=virtual/jre-1.7 )
 	dev-lang/perl"
 
 RDEPEND="
