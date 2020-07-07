@@ -33,10 +33,10 @@ RDEPEND="
 
 src_compile() {
 	default
-	ENABLE_FLAC=$(usex flac "ON" "OFF")
-	ENABLE_LIBID3TAG=$(usex id3 "ON" "OFF")
-	ENABLE_LUA=$(usex lua "ON" "OFF")
-	ENABLE_SSL=$(usex ssl "ON" "OFF")
+	export ENABLE_FLAC=$(usex flac "ON" "OFF")
+	export ENABLE_LIBID3TAG=$(usex id3 "ON" "OFF")
+	export ENABLE_LUA=$(usex lua "ON" "OFF")
+	export ENABLE_SSL=$(usex ssl "ON" "OFF")
 	./build.sh release || die
 }
 
