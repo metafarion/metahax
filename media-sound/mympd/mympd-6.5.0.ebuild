@@ -17,7 +17,7 @@ SRC_URI="https://github.com/jcorporation/${MY_PN}/archive/v${PV}.tar.gz -> ${PN}
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~arm ~arm64"
-IUSE="+flac +id3 java +lua ssl systemd"
+IUSE="+flac +id3 java -lua ssl systemd"
 
 BDEPEND="
 	>=dev-util/cmake-3.4
@@ -25,7 +25,7 @@ BDEPEND="
 	dev-lang/perl"
 
 RDEPEND="
-	lua? ( dev-lang/lua )
+	lua? ( >=dev-lang/lua-5.3 )
 	ssl? ( >=dev-libs/openssl-1.1 )
 	systemd? ( sys-apps/systemd )
 		id3? ( media-libs/libid3tag )
