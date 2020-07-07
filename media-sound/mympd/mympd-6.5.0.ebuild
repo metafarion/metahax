@@ -31,6 +31,10 @@ RDEPEND="
 		id3? ( media-libs/libid3tag )
 		flac? ( media-libs/flac )"
 
+QA_PRESTRIPPED="
+	usr/bin/mympd
+	usr/bin/mympd-config"
+
 src_compile() {
 	default
 	export ENABLE_FLAC=$(usex flac "ON" "OFF")
