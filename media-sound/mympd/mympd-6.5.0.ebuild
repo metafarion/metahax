@@ -37,7 +37,7 @@ src_compile() {
 	ENABLE_LIBID3TAG=$(usex id3 "ON" "OFF")
 	ENABLE_LUA=$(usex lua "ON" "OFF")
 	ENABLE_SSL=$(usex ssl "ON" "OFF")
-	./build.sh release
+	./build.sh release || die
 }
 
 src_install() {
