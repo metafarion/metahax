@@ -33,7 +33,8 @@ RDEPEND="
 
 QA_PRESTRIPPED="
 	usr/bin/mympd
-	usr/bin/mympd-config"
+	usr/bin/mympd-config
+	usr/bin/mympd-script"
 
 src_compile() {
 	default
@@ -48,6 +49,9 @@ src_install() {
 	cd release
 	dobin mympd
 	dobin cli_tools/mympd-config
+	if use lua; then
+		dobin cli_tools/mympd-script
+	fi
 	newinitd "contrib/initscripts/mympd.openrc" "${PN}"
 	if use systemd; then
         	systemd_newunit contrib/initscripts/mympd.service mympd.service
