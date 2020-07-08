@@ -28,8 +28,8 @@ RDEPEND="
 	lua? ( >=dev-lang/lua-5.3 )
 	ssl? ( >=dev-libs/openssl-1.1 )
 	systemd? ( sys-apps/systemd )
-		id3? ( media-libs/libid3tag )
-		flac? ( media-libs/flac )"
+	id3? ( media-libs/libid3tag )
+	flac? ( media-libs/flac )"
 
 QA_PRESTRIPPED="
 	usr/bin/mympd
@@ -50,8 +50,8 @@ src_install() {
 	dobin cli_tools/mympd-config
 	newinitd "contrib/initscripts/mympd.openrc" "${PN}"
 	if use systemd; then
-        systemd_newunit contrib/initscripts/mympd.service mympd.service
-    fi
+        	systemd_newunit contrib/initscripts/mympd.service mympd.service
+	fi
 	${D}/usr/bin/mympd-config --mympdconf ${D}/etc/mympd.conf
 	dodoc ${S}/README.md
 }
