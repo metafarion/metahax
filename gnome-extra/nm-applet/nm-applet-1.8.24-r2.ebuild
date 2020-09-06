@@ -44,6 +44,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/gtk-doc-am-1.0
 	>=sys-devel/gettext-0.18
 	virtual/pkgconfig
+	!>=net-libs/libnma-1.8.25
 "
 
 PDEPEND="virtual/notification-daemon" #546134
