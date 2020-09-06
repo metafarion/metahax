@@ -28,7 +28,7 @@ https://github.com/jcorporation/myMPD
 https://sourceforge.net/projects/sstp-client
 
 **[gnome-extra/nm-applet](gnome-extra/nm-applet)** - Legacy version of the Gnome Network Manager Applet that provides deprecated libnm-gtk for packages that still need it (like net-vpn/networkmanager-sstp)
-https://github.com/jcorporation/myMPD
+https://wiki.gnome.org/Projects/NetworkManager
 
 **[app-crypt/nwipe](app-crypt/nwipe)** - A fork of dwipe from Darik's Boot and Nuke (DBAN) for secure disk erasure
 https://github.com/martijnvanbrummelen/nwipe
