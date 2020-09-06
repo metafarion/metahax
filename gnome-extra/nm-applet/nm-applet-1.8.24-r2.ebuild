@@ -44,6 +44,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/gtk-doc-am-1.0
 	>=sys-devel/gettext-0.18
 	virtual/pkgconfig
+	<net-misc/networkmanager-1.19
 	!>=net-libs/libnma-1.8.25
 "
 
