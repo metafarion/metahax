@@ -27,7 +27,10 @@ https://github.com/jcorporation/myMPD
 **[net-vpn/networkmanager-sstp](net-vpn/networkmanager-sstp)** - NetworkManager plugin for sstp-client: A client for the proprietary Microsoft Secure Socket Tunneling Protocol(SSTP)  
 https://sourceforge.net/projects/sstp-client
 
-**[app-crypt/nwipe](app-crypt/nwipe)** - A fork of dwipe from Darik's Boot and Nuke (DBAN) for secure disk erasure.
+**[gnome-extra/nm-applet](gnome-extra/nm-applet)** - Legacy version of the Gnome Network Manager Applet that provides deprecated libnm-gtk for packages that still need it (like net-vpn/networkmanager-sstp)
+https://github.com/jcorporation/myMPD
+
+**[app-crypt/nwipe](app-crypt/nwipe)** - A fork of dwipe from Darik's Boot and Nuke (DBAN) for secure disk erasure
 https://github.com/martijnvanbrummelen/nwipe
 
 **[app-text/pdfchain](app-text/pdfchain)** - Graphical user interface for the PDF Toolkit (PDFtk)  
