@@ -22,7 +22,6 @@ RDEPEND=">=dev-libs/dbus-glib-0.74
 	x11-libs/gtk+:3
 	gnome-base/gnome-keyring
 	gnome-base/libgnome-keyring
-	gnome-extra/nm-applet
 "
 
 DEPEND="${RDEPEND}
@@ -31,6 +30,7 @@ DEPEND="${RDEPEND}
 	dev-util/intltool
 	>=net-misc/networkmanager-${PV}
 	<net-misc/networkmanager-1.19
+	<gnome-extra/nm-applet-1.9
 
 "
 
