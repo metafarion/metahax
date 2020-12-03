@@ -1,5 +1,5 @@
---- paths.py	2020-12-02 23:28:15.147424204 -0600
-+++ paths.new.py	2020-12-02 23:31:02.159436159 -0600
+--- a/minigalaxy/paths.py	2020-12-02 23:28:15.147424204 -0600
++++ b/minigalaxy/paths.new.py	2020-12-02 23:31:02.159436159 -0600
 @@ -14,20 +14,20 @@
  
  UI_DIR = os.path.abspath(os.path.join(LAUNCH_DIR, "../data/ui"))
