@@ -1,0 +1,28 @@
+--- paths.py	2020-12-02 23:28:15.147424204 -0600
++++ paths.new.py	2020-12-02 23:31:02.159436159 -0600
+@@ -14,20 +14,20 @@
+ 
+ UI_DIR = os.path.abspath(os.path.join(LAUNCH_DIR, "../data/ui"))
+ if not os.path.exists(UI_DIR):
+-    UI_DIR = os.path.abspath(os.path.join(LAUNCH_DIR, "../share/minigalaxy/ui"))
++    UI_DIR = os.path.abspath(os.path.join(LAUNCH_DIR, "/usr/share/minigalaxy/ui"))
+ 
+ LOGO_IMAGE_PATH = os.path.abspath(os.path.join(LAUNCH_DIR, "../data/icons/192x192/io.github.sharkwouter.Minigalaxy.png"))
+ if not os.path.exists(LOGO_IMAGE_PATH):
+-    LOGO_IMAGE_PATH = os.path.abspath(os.path.join(LAUNCH_DIR, "../share/icons/hicolor/192x192/apps/io.github.sharkwouter.Minigalaxy.png"))
++    LOGO_IMAGE_PATH = os.path.abspath(os.path.join(LAUNCH_DIR, "/usr/share/icons/hicolor/192x192/apps/io.github.sharkwouter.Minigalaxy.png"))
+ 
+ ICON_WINE_PATH = os.path.abspath(os.path.join(LAUNCH_DIR, "../data/images/winehq_logo_glass.png"))
+ if not os.path.exists(ICON_WINE_PATH):
+-    ICON_WINE_PATH = os.path.abspath(os.path.join(LAUNCH_DIR, "../share/minigalaxy/images/winehq_logo_glass.png"))
++    ICON_WINE_PATH = os.path.abspath(os.path.join(LAUNCH_DIR, "/usr/share/minigalaxy/images/winehq_logo_glass.png"))
+ 
+ ICON_UPDATE_PATH = os.path.abspath(os.path.join(LAUNCH_DIR, "../data/images/update_available.png"))
+ if not os.path.exists(ICON_UPDATE_PATH):
+-    ICON_UPDATE_PATH = os.path.abspath(os.path.join(LAUNCH_DIR, "../share/minigalaxy/images/update_available.png"))
++    ICON_UPDATE_PATH = os.path.abspath(os.path.join(LAUNCH_DIR, "/usr/share/minigalaxy/images/update_available.png"))
+ 
+ LOCALE_DIR = os.path.abspath(os.path.join(LAUNCH_DIR, "../data/mo"))
+ if not os.path.exists(LOCALE_DIR):
+-    LOCALE_DIR = os.path.abspath(os.path.join(LAUNCH_DIR, "../share/minigalaxy/translations"))
++    LOCALE_DIR = os.path.abspath(os.path.join(LAUNCH_DIR, "/usr/share/minigalaxy/translations"))
