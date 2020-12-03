@@ -5,7 +5,7 @@ EAPI=7
 
 PYTHON_COMPAT=( python3_{7,8,9} )
 
-inherit distutils-r1
+inherit distutils-r1 xdg-utils
 
 DESCRIPTION="Simple GOG client for Linux"
 HOMEPAGE="https://github.com/sharkwouter/minigalaxy"
