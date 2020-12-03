@@ -33,7 +33,7 @@ RDEPEND="${DEPEND}
 	system-scummvm? ( games-engines/scummvm )
 "
 
-#PATCHES=( "${FILESDIR}/${P}-paths.patch" )
+PATCHES=( "${FILESDIR}/${P}-paths.patch" )
 
 python_prepare() {
 	sed -i -e "s/find_packages()/find_packages(exclude=['tests'])/" setup.py || die
