@@ -1,21 +1,21 @@
-# Copyright 2019 Gentoo Authors
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
-PYTHON_COMPAT=( python3_{6,7,8} )
+PYTHON_COMPAT=( python3_{7,8,9} )
 
 inherit distutils-r1
 
 DESCRIPTION="Simple GOG client for Linux"
-HOMEPAGE="http://github.com/sharkwouter/minigalaxy"
+HOMEPAGE="https://github.com/sharkwouter/minigalaxy"
 
 if [[ ${PV} == *9999* ]] ; then
 	inherit git-r3
-    EGIT_REPO_URI="https://github.com/sharkwouter/minigalaxy.git"
+	EGIT_REPO_URI="https://github.com/sharkwouter/minigalaxy.git"
 else
-    SRC_URI="https://github.com/sharkwouter/${PN}/archive/${PV}.tar.gz"
-	KEYWORDS="~x86 ~amd64"
+	SRC_URI="https://github.com/sharkwouter/${PN}/archive/${PV}.tar.gz"
+	KEYWORDS="~amd64 ~x86"
 fi
 
 LICENSE="GPL-3+"
