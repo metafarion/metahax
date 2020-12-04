@@ -33,12 +33,12 @@ src_prepare() {
 
 src_install() {
 	linux-mod_src_install
-	udev_dorules ${MY_PN}/src/udev_rules/99-${PN}.rules
+	udev_dorules ${MY_PN}/etc-udev_rules.d/98-${PN}.rules
 
-	echo "CONFIG_PROTECT_MASK=\"/etc/modprobe.d/99-${PN}-bluetooth.conf\"" > 50${PN}
+	echo "CONFIG_PROTECT_MASK=\"/etc/modprobe.d/98-${PN}-bluetooth.conf\"" > 50${PN}
 	doenvd 50${PN}
 
-	echo "options bluetooth disable_ertm=y" > "99-${PN}-bluetooth.conf"
+	echo "options bluetooth disable_ertm=y" > "98-${PN}-bluetooth.conf"
 	insinto /etc/modprobe.d
 	doins "99-${PN}-bluetooth.conf"
 }
