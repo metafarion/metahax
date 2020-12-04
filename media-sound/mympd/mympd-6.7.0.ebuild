@@ -54,10 +54,10 @@ src_install() {
 	fi
 	newinitd "contrib/initscripts/mympd.openrc" "${PN}"
 	if use systemd; then
-        	systemd_newunit contrib/initscripts/mympd.service mympd.service
+		systemd_newunit contrib/initscripts/mympd.service mympd.service
 	fi
-	${D}/usr/bin/mympd-config --mympdconf ${D}/etc/mympd.conf
-	dodoc ${S}/README.md
+	"${D}/usr/bin/mympd-config" --mympdconf "${D}/etc/mympd.conf"
+	dodoc "${S}/README.md"
 }
 
 pkg_postinst() {
