@@ -5,7 +5,7 @@
 
 EAPI=7
 
-inherit eutils user cmake systemd
+inherit eutils cmake systemd
 
 MY_PN="myMPD"
 S="${WORKDIR}/${MY_PN}-${PV}"
@@ -29,7 +29,9 @@ RDEPEND="
 	ssl? ( >=dev-libs/openssl-1.1 )
 	systemd? ( sys-apps/systemd )
 	id3? ( media-libs/libid3tag )
-	flac? ( media-libs/flac )"
+	flac? ( media-libs/flac )
+	acct-user/mympd
+	acct-group/mympd"
 
 QA_PRESTRIPPED="
 	usr/bin/mympd
@@ -61,14 +63,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	getent group mympd > /dev/null &&
-	elog "Group 'mympd' already exists; not adding." ||
-	enewgroup mympd
-
-	getent passwd mympd > /dev/null &&
-	elog "User 'mympd' already exists; not adding." ||
-	enewuser mympd -1 -1 -1 audio
-
 	elog
 	elog "Modify /etc/mympd.conf to suit your needs or use the"
 	elog "\`mympd-config\` tool to generate a valid mympd.conf automatically."
