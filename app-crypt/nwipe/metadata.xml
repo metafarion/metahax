@@ -8,7 +8,7 @@
 		<remote-id type="github">martijnvanbrummelen/nwipe</remote-id>
 	</upstream>
 	<use>
-	  	<flag name="dmi">Use <pkg>sys-apps/dmidecode</pkg> to read SMBIOS/DMI host data</flag>
+		<flag name="dmi">Use <pkg>sys-apps/dmidecode</pkg> to read SMBIOS/DMI host data</flag>
 		<flag name="smart">Use <pkg>sys-apps/smartmontools</pkg> to read serial numbers from USB-connected IDE/SATA drives.</flag>
 	</use>
 </pkgmetadata>
