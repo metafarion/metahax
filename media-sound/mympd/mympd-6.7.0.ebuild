@@ -16,7 +16,7 @@ SRC_URI="https://github.com/jcorporation/${MY_PN}/archive/v${PV}.tar.gz -> ${PN}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~arm ~arm64"
+KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 IUSE="+flac +id3 java -lua ssl systemd"
 
 BDEPEND="

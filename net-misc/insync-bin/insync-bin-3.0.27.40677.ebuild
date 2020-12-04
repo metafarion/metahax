@@ -1,4 +1,4 @@
-# Copyright 1999-2020 Gentoo Foundation
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -8,6 +8,7 @@ inherit rpm xdg-utils
 DESCRIPTION="Full-featured sync client for Google Drive and OneDrive"
 HOMEPAGE="https://www.insynchq.com/"
 SRC_URI="http://s.insynchq.com/builds/insync-${PV}-fc30.x86_64.rpm"
+LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="~amd64"
