@@ -3,9 +3,13 @@
 
 EAPI=7
 
+U_PN="${PN^}"
+
 DESCRIPTION="Sega Saturn emulator.  Fork of YabaSanshiro/Yabause."
 HOMEPAGE="https://github.com/FCare/Kronos"
-SRC_URI="https://github.com/FCare/Kronos/archive/${PV}_official_release.tar.gz -> ${P^}_official_release.tar.gz"
+SRC_URI="https://github.com/FCare/${U_PN}/archive/${PV}_official_release.tar.gz"
+
+S="$WORKDIR/${U_PN}-${PV}_official_release"
 
 LICENSE="GPL-2"
 SLOT="0"
