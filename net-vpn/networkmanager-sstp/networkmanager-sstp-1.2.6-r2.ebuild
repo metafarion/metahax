@@ -25,6 +25,9 @@ DEPEND="${RDEPEND}
 	app-crypt/libsecret
 	app-crypt/pinentry[gnome-keyring]
 "
+PATCHES=(
+	"${FILESDIR}/${PN}-metainfo_path.patch"
+)
 
 S="${WORKDIR}/${SRC_P}"
 
