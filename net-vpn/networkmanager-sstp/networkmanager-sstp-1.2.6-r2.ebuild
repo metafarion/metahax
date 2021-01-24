@@ -31,11 +31,11 @@ S="${WORKDIR}/${SRC_P}"
 src_configure() {
 	local PPPD_VERSION="$(echo $(best_version net-dialup/ppp) | sed -e 's:net-dialup/ppp-\(.*\):\1:' -e 's:-r.*$::')"
 	econf \
+		--without-libnm-glib \
 		--disable-more-warnings \
 		--disable-static \
 		--with-dist-version=Gentoo \
 		--with-pppd-plugin-dir="${EPREFIX}/usr/$(get_libdir)/pppd/${PPPD_VERSION}"
-		--without-libnm-glib
 }
 
 src_install() {
