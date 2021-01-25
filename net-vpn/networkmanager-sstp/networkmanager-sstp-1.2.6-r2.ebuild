@@ -26,7 +26,7 @@ DEPEND="${RDEPEND}
 	app-crypt/pinentry[gnome-keyring]
 "
 PATCHES=(
-	"${FILESDIR}/${PN}-metainfo_path.patch"
+	"${FILESDIR}/${PV}-metainfo_path.patch"
 )
 
 S="${WORKDIR}/${SRC_P}"
