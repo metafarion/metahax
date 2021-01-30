@@ -1,11 +1,11 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 # Adapted from the myMPD package's included ebuild
 
 EAPI=7
 
-inherit eutils user cmake systemd
+inherit eutils cmake systemd
 
 MY_PN="myMPD"
 S="${WORKDIR}/${MY_PN}-${PV}"
@@ -17,7 +17,7 @@ SRC_URI="https://github.com/jcorporation/${MY_PN}/archive/v${PV}.tar.gz -> ${PN}
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~arm64 ~x86"
-IUSE="+flac +id3 java -lua ssl systemd"
+IUSE="+flac +id3 java lua ssl systemd"
 
 BDEPEND="
 	>=dev-util/cmake-3.4
@@ -29,7 +29,9 @@ RDEPEND="
 	ssl? ( >=dev-libs/openssl-1.1 )
 	systemd? ( sys-apps/systemd )
 	id3? ( media-libs/libid3tag )
-	flac? ( media-libs/flac )"
+	flac? ( media-libs/flac )
+	acct-user/mympd
+	acct-group/mympd"
 
 QA_PRESTRIPPED="
 	usr/bin/mympd
@@ -61,14 +63,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	getent group mympd > /dev/null &&
-	elog "Group 'mympd' already exists; not adding." ||
-	enewgroup mympd
-
-	getent passwd mympd > /dev/null &&
-	elog "User 'mympd' already exists; not adding." ||
-	enewuser mympd -1 -1 -1 audio
-
 	elog
 	elog "Modify /etc/mympd.conf to suit your needs or use the"
 	elog "\`mympd-config\` tool to generate a valid mympd.conf automatically."
